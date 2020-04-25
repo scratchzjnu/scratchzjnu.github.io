@@ -75,6 +75,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-sublime-text3-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200425_sublime-text3-in-ubuntu/" class="article-date">
+  <time datetime="2020-04-25T13:13:35.000Z" itemprop="datePublished">2020-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200425_sublime-text3-in-ubuntu/">Ubuntu中安装Sublime Text 3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Sublime Text 3是优秀的跨平台文本编辑器，也是程序员的神器，它的插件及其管理器的功能应该让人过目不忘。介绍一下Ubuntu中的安装方法。</p>
+<h4 id="添加GPG-Key"><a href="#添加GPG-Key" class="headerlink" title="添加GPG Key"></a>添加GPG Key</h4><p>先在终端中用以下命令下载并添加GPG Key:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https:&#x2F;&#x2F;download.sublimetext.com&#x2F;sublimehq-pub.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+<p>再安装<code>apt-transport-https</code>来为apt增加https源的访问功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apt-transport-https</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h4><p>官方提供了两个版本的源，Stable是稳定版，Dev是开发版，用于新功能（但也许不稳定）的体验，地址分别是：</p>
+<p>Stable</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https:&#x2F;&#x2F;download.sublimetext.com&#x2F; apt&#x2F;stable&#x2F;&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;sublime-text.list</span><br></pre></td></tr></table></figure>
+<p>Dev</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https:&#x2F;&#x2F;download.sublimetext.com&#x2F; apt&#x2F;dev&#x2F;&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;sublime-text.list</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装Sublime-Text-3"><a href="#安装Sublime-Text-3" class="headerlink" title="安装Sublime Text 3"></a>安装Sublime Text 3</h4><p>更新apt的软件源并且安装，可以使用以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sublime-text</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200425_sublime-text3-in-ubuntu/" data-id="ck9fo99w000039cmy0phx4hej" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/20200425_hello-world/" class="article-date">
@@ -226,6 +276,10 @@
       <ul>
         
           <li>
+            <a href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
+          </li>
+        
+          <li>
             <a href="/20200425_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
@@ -239,10 +293,6 @@
         
           <li>
             <a href="/20200425_edit-hosts-in-linux/">编辑Linux的hosts文件</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_sublime-text3-in-ubuntu/">Ubuntu中安装Sublime Text 3</a>
           </li>
         
       </ul>

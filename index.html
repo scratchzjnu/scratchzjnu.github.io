@@ -75,6 +75,72 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo-deploy-travisCI" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200425_hexo-deploy-travisCI/" class="article-date">
+  <time datetime="2020-04-25T13:49:48.000Z" itemprop="datePublished">2020-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hexo内置了一个deploy的功能，可以通过安装一些发布插件（例如针对git的 <code>hexo-deployer-git</code>）来快速部署，此外对于托管在Github的开源项目，也可以使用自动建构工具如TravisCI来发布。</p>
+<p>本教程中，我们使用Travis CI来部署Github Pages。它对于开源仓库是免费的，这意味着你的仓库的主分支必须是公开的。如果你的项目不是开源的，那么还是使用<code>hexo-deployer-git</code>之类的插件。</p>
+<h4 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h4><p>创建一个名为 username.github.io 的版本库，其中 username 是你在 GitHub 上的用户名。如果你已经上传到了其他的repo，请重新命名这个repo。</p>
+<p>将你的Hexo文件夹的文件推送到repository中。public/文件夹默认没有（也不应该）上传，请确保.gitignore文件中包含public/行。文件夹结构应该和这个<a href="https://github.com/hexojs/hexo-starter" target="_blank" rel="noopener">repo</a>大致相似，没有.gitmodules文件。</p>
+<h4 id="连接Travis-CI与Github"><a href="#连接Travis-CI与Github" class="headerlink" title="连接Travis CI与Github"></a>连接Travis CI与Github</h4><ol>
+<li><p>在<a href="https://github.com/marketplace/travis-ci" target="_blank" rel="noopener">https://github.com/marketplace/travis-ci</a>将Travis CI添加到你的账户中。</p>
+</li>
+<li><p>转到<a href="https://github.com/settings/installations" target="_blank" rel="noopener">Application Settings</a>，配置Travis CI以访问这个repo。</p>
+</li>
+<li><p>你会被重定向到Travis页面。</p>
+</li>
+<li><p>在一个新的<a href="https://github.com/settings/tokens" target="_blank" rel="noopener">选项卡</a>上，生成一个新的令牌，包含repo的作用域。记下令牌的值。</p>
+</li>
+<li><p>在Travis页面上，转到你的repo的设置。在<code>Environment Variables</code>下的<code>GH-TOKEN</code>中设置你的用户名与令牌的值，单击添加并保存。</p>
+</li>
+<li><p>在repo中创建<code>.travis.yml</code>文件（与_config.yml、package.json等文件同一目录下），内容如下</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 10 # use nodejs v10 LTS</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate # generate static files</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure></li>
+<li><p>一旦Travis CI完成部署，生成的页面可以在仓库的gh-pages分支中找到。</p>
+</li>
+<li><p>在你的GitHub repo的设置中，导航到 “GitHub Pages”部分，将源码改为gh-pages分支。</p>
+</li>
+<li><p>在username.github.io中查看网页。</p>
+</li>
+</ol>
+<h4 id="项目页面"><a href="#项目页面" class="headerlink" title="项目页面"></a>项目页面</h4><p>如果你喜欢在GitHub上有一个项目页面，可以参考以下步骤：</p>
+<ol>
+<li>在GitHub上导航到你的repo。进入 “设置 “选项卡。更改repository的名称，这样你的blog就可以在username.github.io/repository，repository可以是任何名字，比如blog或hexo。</li>
+<li>编辑你的_config.yml，把<code>root:</code>值改为<code>/&lt;repository&gt;/</code>（必须以斜线开头和结尾，不含括号）。</li>
+<li>提交并推送。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200425_hexo-deploy-travisCI/" data-id="ck9fp2e030000gkmy1rxk7qsc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-ubuntu-software-list" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/20200425_ubuntu-software-list/" class="article-date">
@@ -267,56 +333,6 @@
 
 
   
-    <article id="post-sublime-text3-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_sublime-text3-in-ubuntu/" class="article-date">
-  <time datetime="2020-04-25T13:13:35.000Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_sublime-text3-in-ubuntu/">Ubuntu中安装Sublime Text 3</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Sublime Text 3是优秀的跨平台文本编辑器，也是程序员的神器，它的插件及其管理器的功能应该让人过目不忘。介绍一下Ubuntu中的安装方法。</p>
-<h4 id="添加GPG-Key"><a href="#添加GPG-Key" class="headerlink" title="添加GPG Key"></a>添加GPG Key</h4><p>先在终端中用以下命令下载并添加GPG Key:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https:&#x2F;&#x2F;download.sublimetext.com&#x2F;sublimehq-pub.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
-<p>再安装<code>apt-transport-https</code>来为apt增加https源的访问功能：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apt-transport-https</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h4><p>官方提供了两个版本的源，Stable是稳定版，Dev是开发版，用于新功能（但也许不稳定）的体验，地址分别是：</p>
-<p>Stable</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https:&#x2F;&#x2F;download.sublimetext.com&#x2F; apt&#x2F;stable&#x2F;&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;sublime-text.list</span><br></pre></td></tr></table></figure>
-<p>Dev</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https:&#x2F;&#x2F;download.sublimetext.com&#x2F; apt&#x2F;dev&#x2F;&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;sublime-text.list</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装Sublime-Text-3"><a href="#安装Sublime-Text-3" class="headerlink" title="安装Sublime Text 3"></a>安装Sublime Text 3</h4><p>更新apt的软件源并且安装，可以使用以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sublime-text</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_sublime-text3-in-ubuntu/" data-id="ck9fo99w000039cmy0phx4hej" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -367,6 +383,10 @@
       <ul>
         
           <li>
+            <a href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
+          </li>
+        
+          <li>
             <a href="/20200425_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
@@ -380,10 +400,6 @@
         
           <li>
             <a href="/20200425_edit-hosts-in-linux/">编辑Linux的hosts文件</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_sublime-text3-in-ubuntu/">Ubuntu中安装Sublime Text 3</a>
           </li>
         
       </ul>
