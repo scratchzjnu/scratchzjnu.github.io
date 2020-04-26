@@ -12,16 +12,9 @@
 <meta property="og:site_name" content="无止境地折腾">
 <meta property="og:description" content="Hexo内置了一个deploy的功能，可以通过安装一些发布插件（例如针对git的 hexo-deployer-git）来快速部署，此外对于托管在Github的开源项目，也可以使用自动建构工具如TravisCI来发布。 本教程中，我们使用Travis CI来部署Github Pages。它对于开源仓库是免费的，这意味着你的仓库的主分支必须是公开的。如果你的项目不是开源的，那么还是使用hexo-dep">
 <meta property="article:published_time" content="2020-04-25T13:49:48.000Z">
-<meta property="article:modified_time" content="2020-04-25T14:03:31.294Z">
+<meta property="article:modified_time" content="2020-04-26T01:50:17.822Z">
 <meta property="article:author" content="ZJNUET">
-<meta property="article:tag" content="电脑应用技巧">
-<meta property="article:tag" content=" 教育技术学">
-<meta property="article:tag" content=" 浙江师范大学">
-<meta property="article:tag" content=" Linux">
-<meta property="article:tag" content=" Ubuntu">
-<meta property="article:tag" content=" Python">
-<meta property="article:tag" content=" Raspberry Pi">
-<meta property="article:tag" content=" Arduino">
+<meta property="article:tag" content="hexo, github,">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="无止境地折腾" type="application/atom+xml">
@@ -100,6 +93,8 @@
 <p>本教程中，我们使用Travis CI来部署Github Pages。它对于开源仓库是免费的，这意味着你的仓库的主分支必须是公开的。如果你的项目不是开源的，那么还是使用<code>hexo-deployer-git</code>之类的插件。</p>
 <h4 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h4><p>创建一个名为 username.github.io 的版本库，其中 username 是你在 GitHub 上的用户名。如果你已经上传到了其他的repo，请重新命名这个repo。</p>
 <p>将你的Hexo文件夹的文件推送到repository中。public/文件夹默认没有（也不应该）上传，请确保.gitignore文件中包含public/行。文件夹结构应该和这个<a href="https://github.com/hexojs/hexo-starter" target="_blank" rel="noopener">repo</a>大致相似，没有.gitmodules文件。</p>
+<a id="more"></a>
+
 <h4 id="连接Travis-CI与Github"><a href="#连接Travis-CI与Github" class="headerlink" title="连接Travis CI与Github"></a>连接Travis CI与Github</h4><ol>
 <li><p>在<a href="https://github.com/marketplace/travis-ci" target="_blank" rel="noopener">https://github.com/marketplace/travis-ci</a>将Travis CI添加到你的账户中。</p>
 </li>
@@ -130,9 +125,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_hexo-deploy-travisCI/" data-id="ck9gdllb80003semycmgl9oti" class="article-share-link">Share</a>
+      <a data-url="https://scratchzjnu.github.io/20200425_hexo-deploy-travisCI/" data-id="ck9gebgjv000934mycr3ogdyf" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github,</a></li></ul>
+
     </footer>
   </div>
   
@@ -170,7 +167,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github,</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux,</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-hosts/" rel="tag">linux, hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-thinkpad/" rel="tag">linux, thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-ubuntu/" rel="tag">linux, ubuntu</a></li></ul>
     </div>
   </div>
 
@@ -180,7 +177,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github</a>
+      <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github</a> <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github,</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/linux/" style="font-size: 20px;">linux,</a> <a href="/tags/linux-hosts/" style="font-size: 10px;">linux, hosts</a> <a href="/tags/linux-thinkpad/" style="font-size: 10px;">linux, thinkpad</a> <a href="/tags/linux-ubuntu/" style="font-size: 10px;">linux, ubuntu</a>
     </div>
   </div>
 
@@ -202,11 +199,15 @@
       <ul>
         
           <li>
-            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
+            <a href="/20200426_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
           <li>
-            <a href="/20200425_ubuntu-software-list/">ubuntu-software-list</a>
+            <a href="/20200426_hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
           </li>
         
           <li>
@@ -215,10 +216,6 @@
         
           <li>
             <a href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
           </li>
         
       </ul>

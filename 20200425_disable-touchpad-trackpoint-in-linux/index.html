@@ -5,23 +5,16 @@
   
   <title>Linux中禁用触控板与Trackpoint | 无止境地折腾</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。相关的一些方法如下： 禁用触控板与Trackpoint如果">
+  <meta name="description" content="家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。相关的一些方法如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux中禁用触控板与Trackpoint">
 <meta property="og:url" content="https://scratchzjnu.github.io/20200425_disable-touchpad-trackpoint-in-linux/index.html">
 <meta property="og:site_name" content="无止境地折腾">
-<meta property="og:description" content="家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。相关的一些方法如下： 禁用触控板与Trackpoint如果">
+<meta property="og:description" content="家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。相关的一些方法如下：">
 <meta property="article:published_time" content="2020-04-25T13:15:14.000Z">
-<meta property="article:modified_time" content="2020-04-25T13:25:17.346Z">
+<meta property="article:modified_time" content="2020-04-26T01:50:17.914Z">
 <meta property="article:author" content="ZJNUET">
-<meta property="article:tag" content="电脑应用技巧">
-<meta property="article:tag" content=" 教育技术学">
-<meta property="article:tag" content=" 浙江师范大学">
-<meta property="article:tag" content=" Linux">
-<meta property="article:tag" content=" Ubuntu">
-<meta property="article:tag" content=" Python">
-<meta property="article:tag" content=" Raspberry Pi">
-<meta property="article:tag" content=" Arduino">
+<meta property="article:tag" content="linux, thinkpad">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="无止境地折腾" type="application/atom+xml">
@@ -97,6 +90,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。<br>相关的一些方法如下：</p>
+<a id="more"></a>
+
 <h4 id="禁用触控板与Trackpoint"><a href="#禁用触控板与Trackpoint" class="headerlink" title="禁用触控板与Trackpoint"></a>禁用触控板与Trackpoint</h4><p>如果要同时禁用触控板与Trackpoint，可以使用以下方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -r psmouse # 禁用</span><br><span class="line">sudo modprobe -a psmouse # 启用</span><br></pre></td></tr></table></figure>
 <p>以上操作仅在当前会话有效，如果要长期禁用，可以：<br><code>sudo vi /etc/modeprobe.d/blacklist.conf</code> 然后在blacklist.conf的最后加入以下语句</p>
@@ -109,9 +104,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_disable-touchpad-trackpoint-in-linux/" data-id="ck9gdllbz0008semyas7k19lg" class="article-share-link">Share</a>
+      <a data-url="https://scratchzjnu.github.io/20200425_disable-touchpad-trackpoint-in-linux/" data-id="ck9gebgjk000234my2xwre6wj" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux-thinkpad/" rel="tag">linux, thinkpad</a></li></ul>
+
     </footer>
   </div>
   
@@ -149,7 +146,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github,</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux,</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-hosts/" rel="tag">linux, hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-thinkpad/" rel="tag">linux, thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-ubuntu/" rel="tag">linux, ubuntu</a></li></ul>
     </div>
   </div>
 
@@ -159,7 +156,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github</a>
+      <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github</a> <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github,</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/linux/" style="font-size: 20px;">linux,</a> <a href="/tags/linux-hosts/" style="font-size: 10px;">linux, hosts</a> <a href="/tags/linux-thinkpad/" style="font-size: 10px;">linux, thinkpad</a> <a href="/tags/linux-ubuntu/" style="font-size: 10px;">linux, ubuntu</a>
     </div>
   </div>
 
@@ -181,11 +178,15 @@
       <ul>
         
           <li>
-            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
+            <a href="/20200426_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
           <li>
-            <a href="/20200425_ubuntu-software-list/">ubuntu-software-list</a>
+            <a href="/20200426_hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
           </li>
         
           <li>
@@ -194,10 +195,6 @@
         
           <li>
             <a href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
           </li>
         
       </ul>

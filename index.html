@@ -72,6 +72,90 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ubuntu-software-list" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200426_ubuntu-software-list/" class="article-date">
+  <time datetime="2020-04-26T01:48:45.381Z" itemprop="datePublished">2020-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200426_ubuntu-software-list/">ubuntu-software-list</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装文泉驿微米黑字体"><a href="#安装文泉驿微米黑字体" class="headerlink" title="安装文泉驿微米黑字体"></a>安装文泉驿微米黑字体</h3><p>apt install fonts-wqy-icrohei</p>
+        
+          <p class="article-more-link">
+            <a href="/20200426_ubuntu-software-list/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200426_ubuntu-software-list/" data-id="ck9gebgk1000g34my37rpf8t1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200426_hello-world/" class="article-date">
+  <time datetime="2020-04-26T01:47:51.105Z" itemprop="datePublished">2020-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200426_hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+        
+          <p class="article-more-link">
+            <a href="/20200426_hello-world/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200426_hello-world/" data-id="ck9gebgjr000534myasao4819" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-create-shorcut-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/20200426_create-shorcut-in-ubuntu/" class="article-date">
@@ -95,74 +179,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在Ubuntu系统中要创建程序的快捷方式，可以通过创建<code>.desktop</code>文件的方式来实现。这里以Sublime Text 3为例，先创建一个名为<code>sublime-text.desktop</code>的文件，内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version&#x3D;1.0</span><br><span class="line">Type&#x3D;Link</span><br><span class="line">Name&#x3D;Sublime Text 3</span><br><span class="line">Name[zh_CN]&#x3D;Sublime Text 3</span><br><span class="line">Comment&#x3D;Launch Sublime Text 3 Editor</span><br><span class="line">URL&#x3D;&#x2F;usr&#x2F;bin&#x2F;subl</span><br><span class="line">Icon&#x3D;&#x2F;usr&#x2F;share&#x2F;icons&#x2F;hicolor&#x2F;48x48&#x2F;apps&#x2F;sublime-text.png</span><br><span class="line">X-Ubuntu-Gettext-Domain&#x3D;Sublime Text 3 Editor</span><br></pre></td></tr></table></figure>
-
-<p>这里的Name后面增加了一行<code>Name[zh_CN]=Sublime Text 3</code>是为了说明.desktop是支持多语言的，Name显示的是它在桌面系统中真实显示的名称，如果需要针对不同的语言环境显示不同的值，可以通过修改后面的语言名称来配置，例如增加<code>Name[zh_HK]=XXX</code>之类的配置。文件中的Comment同样支持多语言配置。</p>
-<p>这里比较重要的配置是URL和ICON，分别对应快捷方式要执行的命令以及显示的图标，根据需要修改就可以。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200426_create-shorcut-in-ubuntu/" data-id="ck9gdllb10001semy8mpyhcso" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ubuntu-software-list" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_ubuntu-software-list/" class="article-date">
-  <time datetime="2020-04-25T14:07:49.534Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version&#x3D;1.0</span><br><span class="line">Type&#x3D;Link</span><br><span class="line">Name&#x3D;Sublime Text 3</span><br><span class="line">Comment&#x3D;Launch Sublime Text 3 Editor</span><br><span class="line">URL&#x3D;&#x2F;usr&#x2F;bin&#x2F;subl</span><br><span class="line">Icon&#x3D;&#x2F;usr&#x2F;share&#x2F;icons&#x2F;hicolor&#x2F;48x48&#x2F;apps&#x2F;sublime-text.png</span><br><span class="line">X-Ubuntu-Gettext-Domain&#x3D;Sublime Text 3 Editor</span><br></pre></td></tr></table></figure>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_ubuntu-software-list/">ubuntu-software-list</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Ubuntu软件配置日志</p>
-<h3 id="安装文泉驿微米黑字体"><a href="#安装文泉驿微米黑字体" class="headerlink" title="安装文泉驿微米黑字体"></a>安装文泉驿微米黑字体</h3><p>apt install fonts-wqy-icrohei</p>
-<h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git:"></a>Install Git:</h3><p>apt install git</p>
-<p>output<br><code>将会同时安装下列软件：
-  git-man liberror-perl
-建议安装：
-  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
-  gitweb git-cvs git-mediawiki git-svn
-下列【新】软件包将被安装：
-  git git-man liberror-perl</code></p>
-<h3 id="chinese-man-pages"><a href="#chinese-man-pages" class="headerlink" title="chinese man pages:"></a>chinese man pages:</h3><p>sudo apt install manpages-zh</p>
-<h3 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h3><p>sudo apt install vim ctags vim-doc vim-scripts</p>
-<h3 id="Vim拷贝系统剪切板"><a href="#Vim拷贝系统剪切板" class="headerlink" title="Vim拷贝系统剪切板"></a>Vim拷贝系统剪切板</h3><p>先检查是否支持clipboard:<br>vim –version | grep clipboard</p>
-<p>如果显示+Clipboard等字样，表示支持这一功能，此时可以用以下命令操作：<br>“+y 代替y将选中的内容复制到系统剪切板，效果同ctrl+C<br>“+p 代替p将剪切板中的内容复制到指定位置，效果同ctrl+V</p>
-<p>如果需要用y直接代替”+y复制到剪切板，可以在.vimrc中配置：<br>vim ./vimrc<br>增加如下行：<br>set clipboard=unnamed</p>
-<p>如果版本中不支持Clipboard，即出现-Clipboard。<br>先安装需要的软件包：<br>sudo apt install vim-gtk</p>
-<h3 id="修改hosts文件"><a href="#修改hosts文件" class="headerlink" title="修改hosts文件"></a>修改hosts文件</h3><p>大多数Linux发行版中，hosts文件位于/etc/hosts。可以查阅一下已有的内容：<br>cat /etc/hosts<br>典型输出如：</p>
-<h3 id="激活sublime-text3-3211"><a href="#激活sublime-text3-3211" class="headerlink" title="激活sublime text3 3211"></a>激活sublime text3 3211</h3><p>此操作估计只针对3211有效，其它版本当然也可以试试。<br>1、修改hosts文件<br>vim /etc/hosts<br>在后面添加以下记录，建议在前面用”# 注释”的方式添加一个说明，以免时间久了不知道是用于什么的。</p>
-<p>127.0.0.1 <a href="http://www.sublimetext.com" target="_blank" rel="noopener">www.sublimetext.com</a><br>127.0.0.1 sublimetext.com<br>127.0.0.1 sublimehq.com<br>127.0.0.1 license.sublimehq.com<br>127.0.0.1 45.55.255.55<br>127.0.0.1 45.55.41.223<br>0.0.0.0 license.sublimehq.com<br>0.0.0.0 45.55.255.55<br>0.0.0.0 45.55.41.223</p>
-<p>保存并退出vim。</p>
-<p>2、在Sublime Text3的Help/ Enter Liscence<br>—– BEGIN LICENSE —–<br>Member J2TeaM<br>Single User License<br>EA7E-1011316<br>D7DA350E 1B8B0760 972F8B60 F3E64036<br>B9B4E234 F356F38F 0AD1E3B7 0E9C5FAD<br>FA0A2ABE 25F65BD8 D51458E5 3923CE80<br>87428428 79079A01 AA69F319 A1AF29A4<br>A684C2DC 0B1583D4 19CBD290 217618CD<br>5653E0A0 BACE3948 BB2EE45E 422D2C87<br>DD9AF44B 99C49590 D2DBDEE1 75860FD2<br>8C8BB2AD B2ECE5A4 EFC08AF2 25A9B864<br>—— END LICENSE —</p>
-
+          <p class="article-more-link">
+            <a href="/20200426_create-shorcut-in-ubuntu/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_ubuntu-software-list/" data-id="ck9gdllbd0007semyeizd1qds" class="article-share-link">Share</a>
+      <a data-url="https://scratchzjnu.github.io/20200426_create-shorcut-in-ubuntu/" data-id="ck9gebgje000134myfntea0jg" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
     </footer>
   </div>
   
@@ -198,19 +228,19 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm --global config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 <p>查看并检查配置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装版本更新工具N："><a href="#安装版本更新工具N：" class="headerlink" title="安装版本更新工具N："></a>安装版本更新工具N：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install n -g</span><br></pre></td></tr></table></figure>
-<p>更新版本，显示installed:版本号，表示更新成功。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo n stable</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
+        
+          <p class="article-more-link">
+            <a href="/20200425_install-hexo-in-ubuntu/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_install-hexo-in-ubuntu/" data-id="ck9gdllba0005semy4np3evsw" class="article-share-link">Share</a>
+      <a data-url="https://scratchzjnu.github.io/20200425_install-hexo-in-ubuntu/" data-id="ck9gebgjy000c34myawe952do" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux-ubuntu/" rel="tag">linux, ubuntu</a></li></ul>
+
     </footer>
   </div>
   
@@ -244,84 +274,19 @@
 <p>本教程中，我们使用Travis CI来部署Github Pages。它对于开源仓库是免费的，这意味着你的仓库的主分支必须是公开的。如果你的项目不是开源的，那么还是使用<code>hexo-deployer-git</code>之类的插件。</p>
 <h4 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h4><p>创建一个名为 username.github.io 的版本库，其中 username 是你在 GitHub 上的用户名。如果你已经上传到了其他的repo，请重新命名这个repo。</p>
 <p>将你的Hexo文件夹的文件推送到repository中。public/文件夹默认没有（也不应该）上传，请确保.gitignore文件中包含public/行。文件夹结构应该和这个<a href="https://github.com/hexojs/hexo-starter" target="_blank" rel="noopener">repo</a>大致相似，没有.gitmodules文件。</p>
-<h4 id="连接Travis-CI与Github"><a href="#连接Travis-CI与Github" class="headerlink" title="连接Travis CI与Github"></a>连接Travis CI与Github</h4><ol>
-<li><p>在<a href="https://github.com/marketplace/travis-ci" target="_blank" rel="noopener">https://github.com/marketplace/travis-ci</a>将Travis CI添加到你的账户中。</p>
-</li>
-<li><p>转到<a href="https://github.com/settings/installations" target="_blank" rel="noopener">Application Settings</a>，配置Travis CI以访问这个repo。</p>
-</li>
-<li><p>你会被重定向到Travis页面。</p>
-</li>
-<li><p>在一个新的<a href="https://github.com/settings/tokens" target="_blank" rel="noopener">选项卡</a>上，生成一个新的令牌，包含repo的作用域。记下令牌的值。</p>
-</li>
-<li><p>在Travis页面上，转到你的repo的设置。在<code>Environment Variables</code>下的<code>GH-TOKEN</code>中设置你的用户名与令牌的值，单击添加并保存。</p>
-</li>
-<li><p>在repo中创建<code>.travis.yml</code>文件（与_config.yml、package.json等文件同一目录下），内容如下</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo: false</span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 10 # use nodejs v10 LTS</span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master # build master branch only</span><br><span class="line">script:</span><br><span class="line">  - hexo generate # generate static files</span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: true</span><br><span class="line">  github-token: $GH_TOKEN</span><br><span class="line">  keep-history: true</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure></li>
-<li><p>一旦Travis CI完成部署，生成的页面可以在仓库的gh-pages分支中找到。</p>
-</li>
-<li><p>在你的GitHub repo的设置中，导航到 “GitHub Pages”部分，将源码改为gh-pages分支。</p>
-</li>
-<li><p>在username.github.io中查看网页。</p>
-</li>
-</ol>
-<h4 id="项目页面"><a href="#项目页面" class="headerlink" title="项目页面"></a>项目页面</h4><p>如果你喜欢在GitHub上有一个项目页面，可以参考以下步骤：</p>
-<ol>
-<li>在GitHub上导航到你的repo。进入 “设置 “选项卡。更改repository的名称，这样你的blog就可以在username.github.io/repository，repository可以是任何名字，比如blog或hexo。</li>
-<li>编辑你的_config.yml，把<code>root:</code>值改为<code>/&lt;repository&gt;/</code>（必须以斜线开头和结尾，不含括号）。</li>
-<li>提交并推送。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_hexo-deploy-travisCI/" data-id="ck9gdllb80003semycmgl9oti" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-disable-touchpad-trackpoint-in-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_disable-touchpad-trackpoint-in-linux/" class="article-date">
-  <time datetime="2020-04-25T13:15:14.000Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。<br>相关的一些方法如下：</p>
-<h4 id="禁用触控板与Trackpoint"><a href="#禁用触控板与Trackpoint" class="headerlink" title="禁用触控板与Trackpoint"></a>禁用触控板与Trackpoint</h4><p>如果要同时禁用触控板与Trackpoint，可以使用以下方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -r psmouse # 禁用</span><br><span class="line">sudo modprobe -a psmouse # 启用</span><br></pre></td></tr></table></figure>
-<p>以上操作仅在当前会话有效，如果要长期禁用，可以：<br><code>sudo vi /etc/modeprobe.d/blacklist.conf</code> 然后在blacklist.conf的最后加入以下语句</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blacklist psmouse</span><br></pre></td></tr></table></figure>
-<p>此外，在BIOS中进行设置也是一种方法，但不太推荐，以免太长时间不用忘记还以为是硬件故障。</p>
-<h4 id="仅禁用触控板"><a href="#仅禁用触控板" class="headerlink" title="仅禁用触控板"></a>仅禁用触控板</h4><p>如果需要单独对触控板进行禁用与启用，可以用以下方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">synclient touchpadoff&#x3D;1 # 禁用</span><br><span class="line">synclient touchpadoff&#x3D;0 # 启用</span><br></pre></td></tr></table></figure>
-<p>此时尽管触控板禁用了，但Trackpoint依然可用。比较符合我的需求，同样这一方法也仅在当前会话中有效。如果需要一直保持这一配置，可以在<code>~/.bashrc</code>中添加上述代码。<br>即<code>vim ~/.bashrc</code>, 在最后增加：<code>synclient touchpadoff=1</code>，保存退出</p>
-
+          <p class="article-more-link">
+            <a href="/20200425_hexo-deploy-travisCI/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_disable-touchpad-trackpoint-in-linux/" data-id="ck9gdllbz0008semyas7k19lg" class="article-share-link">Share</a>
+      <a data-url="https://scratchzjnu.github.io/20200425_hexo-deploy-travisCI/" data-id="ck9gebgjv000934mycr3ogdyf" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github,</a></li></ul>
+
     </footer>
   </div>
   
@@ -347,7 +312,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-github/" rel="tag">hexo, github,</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux,</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-hosts/" rel="tag">linux, hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-thinkpad/" rel="tag">linux, thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-ubuntu/" rel="tag">linux, ubuntu</a></li></ul>
     </div>
   </div>
 
@@ -357,7 +322,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github</a>
+      <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github</a> <a href="/tags/hexo-github/" style="font-size: 10px;">hexo, github,</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/linux/" style="font-size: 20px;">linux,</a> <a href="/tags/linux-hosts/" style="font-size: 10px;">linux, hosts</a> <a href="/tags/linux-thinkpad/" style="font-size: 10px;">linux, thinkpad</a> <a href="/tags/linux-ubuntu/" style="font-size: 10px;">linux, ubuntu</a>
     </div>
   </div>
 
@@ -379,11 +344,15 @@
       <ul>
         
           <li>
-            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
+            <a href="/20200426_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
           <li>
-            <a href="/20200425_ubuntu-software-list/">ubuntu-software-list</a>
+            <a href="/20200426_hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
           </li>
         
           <li>
@@ -392,10 +361,6 @@
         
           <li>
             <a href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
           </li>
         
       </ul>
