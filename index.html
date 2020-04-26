@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8">
   
-
-  
   <title>无止境地折腾</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
@@ -28,7 +26,6 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -74,6 +71,47 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-create-shorcut-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200426_create-shorcut-in-ubuntu/" class="article-date">
+  <time datetime="2020-04-26T01:17:30.000Z" itemprop="datePublished">2020-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在Ubuntu系统中要创建程序的快捷方式，可以通过创建<code>.desktop</code>文件的方式来实现。这里以Sublime Text 3为例，先创建一个名为<code>sublime-text.desktop</code>的文件，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version&#x3D;1.0</span><br><span class="line">Type&#x3D;Link</span><br><span class="line">Name&#x3D;Sublime Text 3</span><br><span class="line">Name[zh_CN]&#x3D;Sublime Text 3</span><br><span class="line">Comment&#x3D;Launch Sublime Text 3 Editor</span><br><span class="line">URL&#x3D;&#x2F;usr&#x2F;bin&#x2F;subl</span><br><span class="line">Icon&#x3D;&#x2F;usr&#x2F;share&#x2F;icons&#x2F;hicolor&#x2F;48x48&#x2F;apps&#x2F;sublime-text.png</span><br><span class="line">X-Ubuntu-Gettext-Domain&#x3D;Sublime Text 3 Editor</span><br></pre></td></tr></table></figure>
+
+<p>这里的Name后面增加了一行<code>Name[zh_CN]=Sublime Text 3</code>是为了说明.desktop是支持多语言的，Name显示的是它在桌面系统中真实显示的名称，如果需要针对不同的语言环境显示不同的值，可以通过修改后面的语言名称来配置，例如增加<code>Name[zh_HK]=XXX</code>之类的配置。文件中的Comment同样支持多语言配置。</p>
+<p>这里比较重要的配置是URL和ICON，分别对应快捷方式要执行的命令以及显示的图标，根据需要修改就可以。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200426_create-shorcut-in-ubuntu/" data-id="ck9gdedz20000ljmy9pw44hyn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-ubuntu-software-list" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -291,48 +329,6 @@
 
 
   
-    <article id="post-install-flameshot-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_install-flameshot-in-ubuntu/" class="article-date">
-  <time datetime="2020-04-25T13:14:23.000Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_install-flameshot-in-ubuntu/">在Ubuntu中安装FlameShot</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>FlameShot是Linux下一个非常不错的截屏软件，安装与使用也比较简单，功能也比较全。</p>
-<h4 id="安装FlameShot"><a href="#安装FlameShot" class="headerlink" title="安装FlameShot"></a>安装FlameShot</h4><p>软件已经收录到Ubuntu的应用仓库了，所以安装很简单。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install flameshot</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用FlameShot"><a href="#使用FlameShot" class="headerlink" title="使用FlameShot"></a>使用FlameShot</h4><p>安装后软件的位置在<code>/usr/bin/flameshot</code> ，运行的参数是：<code>/usr/bin/flameshot guibin/flameshot gui</code>。可以为它在快速启动面板中创建一个快捷图标。</p>
-<p>另外，也可以创建一个系统快捷键，在Lubuntu启动菜单中是在”系统工具“/”setup hotkeys”中。<br>在“Program”中添加一个新的项目，执行的命令是：<code>/usr/bin/flameshot gui</code>, 可以设置一个自己习惯的快捷键，例如：<code>CTRL+ALT+A</code> （微信Windows客户端中也是这个吧？）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_install-flameshot-in-ubuntu/" data-id="ck9fo99vz00029cmy4l12a76h" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -383,6 +379,10 @@
       <ul>
         
           <li>
+            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
+          </li>
+        
+          <li>
             <a href="/20200425_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
@@ -396,10 +396,6 @@
         
           <li>
             <a href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_install-flameshot-in-ubuntu/">在Ubuntu中安装FlameShot</a>
           </li>
         
       </ul>
