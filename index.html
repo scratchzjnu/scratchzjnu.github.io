@@ -72,6 +72,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo-landscape-setting-tips" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200426_hexo-landscape-setting-tips/" class="article-date">
+  <time datetime="2020-04-26T02:31:51.000Z" itemprop="datePublished">2020-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200426_hexo-landscape-setting-tips/">Hexo Landscape主题的一些配置记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Landscape是Hexo自带的默认主题，这里记录一些常见的修改配置。当然，Hexo有很多漂亮的主题，你也可以clone相关主题的repo添加到themes目录，并在hexo的_config.yml的theme项中来指定。</p>
+<ol>
+<li><p>Hexo创建的贴子是以标题作为文件名了，多了容易乱，如何处理？  </p>
+<p> 可以在Hexo的<code>_config.yml</code>中修改”#Writing”部分的`new_post_name”，例如以下语句是将其设置为“年月日-标题”的方式：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new_post_name: :year:month:day_:title.md # File name of new posts</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/20200426_hexo-landscape-setting-tips/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200426_hexo-landscape-setting-tips/" data-id="ck9gguahk0000d3myghto138e" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-ubuntu-software-list" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/20200426_ubuntu-software-list/" class="article-date">
@@ -474,56 +521,12 @@
 
 
   
-    <article id="post-hexo-deploy-github" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200424_hexo-deploy-github/" class="article-date">
-  <time datetime="2020-04-24T04:01:19.000Z" itemprop="datePublished">2020-04-24</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200424_hexo-deploy-github/">Hexo部署到Github Pages</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前置条件：</p>
-<ul>
-<li>已经安装git, Hexo，并已初始化站点</li>
-<li>已经将<code>~/.ssh/id_rsa.pub</code>中的公钥添加到Github的SSH Keys中。</li>
-</ul>
-<p>1、启用Github Pages<br>登录Github Pages，创建一个名为：username.github.io的仓库，往这仓库里push随便一个文件，因为空仓库是无法启用Github Pages的。</p>
-<p>然后在项目的“Settings”页下拉找到Github Pages部分，确保此选项已经启用，同时选择对应的分支，这里图省事就用master了（最好另行创建一个分支来保存Hexo的md文件）。</p>
-        
-          <p class="article-more-link">
-            <a href="/20200424_hexo-deploy-github/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200424_hexo-deploy-github/" data-id="ck9gebgjt000634mydlrt1uu4" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &amp;raquo;</a>
+  </nav>
 
 </section>
         
@@ -546,7 +549,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+      <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
     </div>
   </div>
 
@@ -568,6 +571,10 @@
       <ul>
         
           <li>
+            <a href="/20200426_hexo-landscape-setting-tips/">Hexo Landscape主题的一些配置记录</a>
+          </li>
+        
+          <li>
             <a href="/20200426_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
@@ -581,10 +588,6 @@
         
           <li>
             <a href="/20200425_install-hexo-in-ubuntu/">在Ubuntu中安装Hexo</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
           </li>
         
       </ul>
