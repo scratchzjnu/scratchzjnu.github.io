@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2020/4 | 无止境地折腾</title>
+  <title>Lubuntu下用命令行建立WiFi连接 | 无止境地折腾</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="无止境地折腾">
-<meta property="og:url" content="https://scratchzjnu.github.io/archives/2020/04/page/2/index.html">
+  <meta name="description" content="要在命令行下连接WiFi到特定的SSID，可以参照以下的步骤： 查看网卡并启用123iwconfigsudo ip link set wlan0 up # 改成自己的无线网卡  扫描可用热点1234sudo iw dev wlan0 scan | less  # 分页显示sudo iw dev wlan0 scan | grep SSID # 仅显示包含SSID的行，即热点列表 连接到热点找到自己">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lubuntu下用命令行建立WiFi连接">
+<meta property="og:url" content="https://scratchzjnu.github.io/20200427_create-wifi-connection-lubuntu/index.html">
 <meta property="og:site_name" content="无止境地折腾">
+<meta property="og:description" content="要在命令行下连接WiFi到特定的SSID，可以参照以下的步骤： 查看网卡并启用123iwconfigsudo ip link set wlan0 up # 改成自己的无线网卡  扫描可用热点1234sudo iw dev wlan0 scan | less  # 分页显示sudo iw dev wlan0 scan | grep SSID # 仅显示包含SSID的行，即热点列表 连接到热点找到自己">
+<meta property="article:published_time" content="2020-04-27T02:10:00.000Z">
+<meta property="article:modified_time" content="2020-04-27T02:10:00.000Z">
 <meta property="article:author" content="ZJNUET">
-<meta property="article:tag" content="电脑应用技巧">
-<meta property="article:tag" content=" 教育技术学">
-<meta property="article:tag" content=" 浙江师范大学">
-<meta property="article:tag" content=" Linux">
-<meta property="article:tag" content=" Ubuntu">
-<meta property="article:tag" content=" Python">
-<meta property="article:tag" content=" Raspberry Pi">
-<meta property="article:tag" content=" Arduino">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="网络">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="无止境地折腾" type="application/atom+xml">
@@ -70,121 +68,69 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200426_hello-world/" class="archive-article-date">
-  <time datetime="2020-04-26T01:47:51.105Z" itemprop="datePublished">Apr 26</time>
+        <section id="main"><article id="post-create-wifi-connection-lubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200427_create-wifi-connection-lubuntu/" class="article-date">
+  <time datetime="2020-04-27T02:10:00.000Z" itemprop="datePublished">2020-04-27</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200426_hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Lubuntu下用命令行建立WiFi连接
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200426_create-shorcut-in-ubuntu/" class="archive-article-date">
-  <time datetime="2020-04-26T01:17:30.000Z" itemprop="datePublished">Apr 26</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
-    </h1>
-  
+        <p>要在命令行下连接WiFi到特定的SSID，可以参照以下的步骤：</p>
+<h5 id="查看网卡并启用"><a href="#查看网卡并启用" class="headerlink" title="查看网卡并启用"></a>查看网卡并启用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iwconfig</span><br><span class="line"></span><br><span class="line">sudo ip link set wlan0 up # 改成自己的无线网卡</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200425_install-hexo-in-ubuntu/" class="archive-article-date">
-  <time datetime="2020-04-25T14:06:28.000Z" itemprop="datePublished">Apr 25</time>
-</a>
+<h4 id="扫描可用热点"><a href="#扫描可用热点" class="headerlink" title="扫描可用热点"></a>扫描可用热点</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo iw dev wlan0 scan | less  # 分页显示</span><br><span class="line"></span><br><span class="line">sudo iw dev wlan0 scan | grep SSID # 仅显示包含SSID的行，即热点列表</span><br></pre></td></tr></table></figure>
+<h5 id="连接到热点"><a href="#连接到热点" class="headerlink" title="连接到热点"></a>连接到热点</h5><p>找到自己要连接的SSID，用以下命令连接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo iw dev wlan0 connect [网络 SSID] key 0:[WEP 密钥]</span><br></pre></td></tr></table></figure>
+
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200425_install-hexo-in-ubuntu/">在Ubuntu中安装Hexo</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200425_hexo-deploy-travisCI/" class="archive-article-date">
-  <time datetime="2020-04-25T13:49:48.000Z" itemprop="datePublished">Apr 25</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200427_create-wifi-connection-lubuntu/" data-id="ck9i6kk1b0005q2skahtt9ro1" class="article-share-link">分享</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200425_disable-touchpad-trackpoint-in-linux/" class="archive-article-date">
-  <time datetime="2020-04-25T13:15:14.000Z" itemprop="datePublished">Apr 25</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2020/04/">&amp;laquo; 上一页</a><a class="page-number" href="/archives/2020/04/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2020/04/page/3/">3</a><a class="extend next" rel="next" href="/archives/2020/04/page/3/">下一页 &amp;raquo;</a>
-  </nav>
+<nav id="article-nav">
+  
+    <a href="/20200427_change-useragent-in-falcon/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新</strong>
+      <div class="article-nav-title">
+        
+          修改Falcon浏览器的User Agent信息
+        
+      </div>
+    </a>
+  
+  
+    <a href="/20200427_wifi-autoconnect-lubuntu20/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更老</strong>
+      <div class="article-nav-title">Lubuntu 20.04中自动连接WiFi</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

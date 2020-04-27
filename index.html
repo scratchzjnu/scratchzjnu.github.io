@@ -72,6 +72,138 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-change-useragent-in-falcon" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200427_change-useragent-in-falcon/" class="article-date">
+  <time datetime="2020-04-27T07:23:19.000Z" itemprop="datePublished">2020-04-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200427_change-useragent-in-falcon/">修改Falcon浏览器的User Agent信息</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>现在很多的网站为了确保用户体验，限制了允许使用的浏览器软件及其版本，一旦检测到不属于目标的浏览器就禁止用户登录，并“友情”给出一个浏览器软件下载的链接。但实际上，如果浏览器的内核是一样的，最终显示的效果也基本是一致的，所以对这样的处理有点不好理解。退回去说，显示效果不佳，或者某些功能缺失，总比什么也不能看好吧。</p>
+<p>现在很多浏览器都使用Chromium、Firefox的内核，本质其实可以归为同一类，因此有时候也比较无奈。比如我们有个网站，开发商限定了Safari、Chrome以及360的某些版本，这样一来，其它的第三方浏览器，如QQ浏览器虽然也与360一样使用了Chromium内核，但就无法登录了。我在Lubuntu中使用的是Falcon就总是受这种歧视，所以决定修改一下User Agent伪装成其它浏览器吧。</p>
+        
+          <p class="article-more-link">
+            <a href="/20200427_change-useragent-in-falcon/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200427_change-useragent-in-falcon/" data-id="ck9i6kjz80000q2sk6zgzd84o" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-create-wifi-connection-lubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200427_create-wifi-connection-lubuntu/" class="article-date">
+  <time datetime="2020-04-27T02:10:00.000Z" itemprop="datePublished">2020-04-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200427_create-wifi-connection-lubuntu/">Lubuntu下用命令行建立WiFi连接</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要在命令行下连接WiFi到特定的SSID，可以参照以下的步骤：</p>
+<h5 id="查看网卡并启用"><a href="#查看网卡并启用" class="headerlink" title="查看网卡并启用"></a>查看网卡并启用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iwconfig</span><br><span class="line"></span><br><span class="line">sudo ip link set wlan0 up # 改成自己的无线网卡</span><br></pre></td></tr></table></figure>
+
+<h4 id="扫描可用热点"><a href="#扫描可用热点" class="headerlink" title="扫描可用热点"></a>扫描可用热点</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo iw dev wlan0 scan | less  # 分页显示</span><br><span class="line"></span><br><span class="line">sudo iw dev wlan0 scan | grep SSID # 仅显示包含SSID的行，即热点列表</span><br></pre></td></tr></table></figure>
+<h5 id="连接到热点"><a href="#连接到热点" class="headerlink" title="连接到热点"></a>连接到热点</h5><p>找到自己要连接的SSID，用以下命令连接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo iw dev wlan0 connect [网络 SSID] key 0:[WEP 密钥]</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200427_create-wifi-connection-lubuntu/" data-id="ck9i6kk1b0005q2skahtt9ro1" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-wifi-autoconnect-lubuntu20" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200427_wifi-autoconnect-lubuntu20/" class="article-date">
+  <time datetime="2020-04-27T02:03:57.000Z" itemprop="datePublished">2020-04-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200427_wifi-autoconnect-lubuntu20/">Lubuntu 20.04中自动连接WiFi</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有时候我们出于各种原因都想在系统启动后自动连接到WiFi，在Lubuntu 20.04中，似乎在图形化的配置面板中找不到实现这一设置的方法，如果需要设置，只能通过修改配置文件了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;NetworkManager&#x2F;NetworkManager.conf</span><br></pre></td></tr></table></figure>
+<p>然后修改其中的managed值为true：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ifupdown]</span><br><span class="line">managed&#x3D;true</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200427_wifi-autoconnect-lubuntu20/" data-id="ck9i6kk190004q2skfqi45n03" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hexo-landscape-setting-tips" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/20200426_hexo-landscape-setting-tips/" class="article-date">
@@ -384,143 +516,6 @@
 
 
   
-    <article id="post-install-flameshot-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_install-flameshot-in-ubuntu/" class="article-date">
-  <time datetime="2020-04-25T13:14:23.000Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_install-flameshot-in-ubuntu/">在Ubuntu中安装FlameShot</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>FlameShot是Linux下一个非常不错的截屏软件，安装与使用也比较简单，功能也比较全。</p>
-<h4 id="安装FlameShot"><a href="#安装FlameShot" class="headerlink" title="安装FlameShot"></a>安装FlameShot</h4><p>软件已经收录到Ubuntu的应用仓库了，所以安装很简单。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install flameshot</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/20200425_install-flameshot-in-ubuntu/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_install-flameshot-in-ubuntu/" data-id="ck9gebgjw000a34my2xz190ph" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-edit-hosts-in-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_edit-hosts-in-linux/" class="article-date">
-  <time datetime="2020-04-25T13:13:50.000Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_edit-hosts-in-linux/">编辑Linux的hosts文件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>默认情况下，Linux中的hosts文件存储于<code>/etc/hosts</code>，直接编辑这个文件就可以完成hosts记录的修改。这里说几个常用的操作方法，不然一句话一个贴子实在有点过意不去。</p>
-<h4 id="查看hosts文件内容"><a href="#查看hosts文件内容" class="headerlink" title="查看hosts文件内容"></a>查看hosts文件内容</h4><p>最简单的是终端中用<code>cat /etc/hosts</code>即可，输出样例如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lester@lubuntu:~&#x2F;Documents&#x2F;hexo$ cat &#x2F;etc&#x2F;hosts</span><br><span class="line">127.0.0.1	localhost</span><br><span class="line">127.0.1.1	lubuntu</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/20200425_edit-hosts-in-linux/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_edit-hosts-in-linux/" data-id="ck9gebgjp000434my7ms81pyc" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-sublime-text3-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_sublime-text3-in-ubuntu/" class="article-date">
-  <time datetime="2020-04-25T13:13:35.000Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_sublime-text3-in-ubuntu/">Ubuntu中安装Sublime Text 3</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Sublime Text 3是优秀的跨平台文本编辑器，也是程序员的神器，它的插件及其管理器的功能应该让人过目不忘。介绍一下Ubuntu中的安装方法。</p>
-<h4 id="添加GPG-Key"><a href="#添加GPG-Key" class="headerlink" title="添加GPG Key"></a>添加GPG Key</h4><p>先在终端中用以下命令下载并添加GPG Key:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https:&#x2F;&#x2F;download.sublimetext.com&#x2F;sublimehq-pub.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
-<p>再安装<code>apt-transport-https</code>来为apt增加https源的访问功能：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apt-transport-https</span><br></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/20200425_sublime-text3-in-ubuntu/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_sublime-text3-in-ubuntu/" data-id="ck9gebgjz000e34my5usxg1zk" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -539,7 +534,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
     </div>
   </div>
 
@@ -549,7 +544,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 13.33px;">github</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a>
+      <a href="/tags/github/" style="font-size: 12.5px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 15px;">网络</a>
     </div>
   </div>
 
@@ -571,23 +566,23 @@
       <ul>
         
           <li>
+            <a href="/20200427_change-useragent-in-falcon/">修改Falcon浏览器的User Agent信息</a>
+          </li>
+        
+          <li>
+            <a href="/20200427_create-wifi-connection-lubuntu/">Lubuntu下用命令行建立WiFi连接</a>
+          </li>
+        
+          <li>
+            <a href="/20200427_wifi-autoconnect-lubuntu20/">Lubuntu 20.04中自动连接WiFi</a>
+          </li>
+        
+          <li>
             <a href="/20200426_hexo-landscape-setting-tips/">Hexo Landscape主题的一些配置记录</a>
           </li>
         
           <li>
             <a href="/20200426_ubuntu-software-list/">ubuntu-software-list</a>
-          </li>
-        
-          <li>
-            <a href="/20200426_hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
-          </li>
-        
-          <li>
-            <a href="/20200425_install-hexo-in-ubuntu/">在Ubuntu中安装Hexo</a>
           </li>
         
       </ul>
