@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="无止境地折腾">
 <meta property="og:description" content="家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。相关的一些方法如下：">
 <meta property="article:published_time" content="2020-04-25T13:15:14.000Z">
-<meta property="article:modified_time" content="2020-04-26T02:07:09.046Z">
+<meta property="article:modified_time" content="2020-04-25T13:15:14.000Z">
 <meta property="article:author" content="ZJNUET">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="thinkpad">
@@ -99,8 +99,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blacklist psmouse</span><br></pre></td></tr></table></figure>
 <p>此外，在BIOS中进行设置也是一种方法，但不太推荐，以免太长时间不用忘记还以为是硬件故障。</p>
 <h4 id="仅禁用触控板"><a href="#仅禁用触控板" class="headerlink" title="仅禁用触控板"></a>仅禁用触控板</h4><p>如果需要单独对触控板进行禁用与启用，可以用以下方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">synclient touchpadoff&#x3D;1 # 禁用</span><br><span class="line">synclient touchpadoff&#x3D;0 # 启用</span><br></pre></td></tr></table></figure>
-<p>此时尽管触控板禁用了，但Trackpoint依然可用。比较符合我的需求，同样这一方法也仅在当前会话中有效。如果需要一直保持这一配置，可以在<code>~/.bashrc</code>中添加上述代码。<br>即<code>vim ~/.bashrc</code>, 在最后增加：<code>synclient touchpadoff=1</code>，保存退出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">synclient TouchpadOff&#x3D;1 # 禁用</span><br><span class="line">synclient TouchpadOff&#x3D;0 # 启用</span><br></pre></td></tr></table></figure>
+<p>此时尽管触控板禁用了，但Trackpoint依然可用。比较符合我的需求，同样这一方法也仅在当前会话中有效。如果需要一直保持这一配置，可以在<code>/etc/rc.local</code>中添加上述代码。<br>即<code>sudo vim /etc/rc.local</code>, 在最后增加：<code>synclient TouchpadOff=1</code>，保存退出</p>
 
       
     </div>
@@ -147,7 +147,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/" rel="tag">sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
     </div>
   </div>
 
@@ -157,7 +157,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 12.5px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 15px;">网络</a>
+      <a href="/tags/github/" style="font-size: 12.5px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 15px;">网络</a>
     </div>
   </div>
 
@@ -179,6 +179,10 @@
       <ul>
         
           <li>
+            <a href="/20200428_sublime-3211-regi/">Sublime Text3输入注册码</a>
+          </li>
+        
+          <li>
             <a href="/20200427_change-useragent-in-falcon/">修改Falcon浏览器的User Agent信息</a>
           </li>
         
@@ -192,10 +196,6 @@
         
           <li>
             <a href="/20200426_hexo-landscape-setting-tips/">Hexo Landscape主题的一些配置记录</a>
-          </li>
-        
-          <li>
-            <a href="/20200426_ubuntu-software-list/">ubuntu-software-list</a>
           </li>
         
       </ul>
