@@ -3,12 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2020 | 无止境地折腾</title>
+  <title>将本地文件加入Git仓库 | 无止境地折腾</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="无止境地折腾">
-<meta property="og:url" content="https://scratchzjnu.github.io/archives/2020/page/2/index.html">
+  <meta name="description" content="初始化本地仓库将存储了本地文件的目录初始化为Git仓库，添加已有文件并提交。相关代码如下： 123git initgit add .git commit -m &#39;import local files&#39;  添加远程仓库添加远程仓库地址，并拉取远程仓库文件与本地文件合并，相关代码如下： 12git remote add origin 你的远程库地址（如:git@github.com:u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将本地文件加入Git仓库">
+<meta property="og:url" content="https://scratchzjnu.github.io/20200425_add-local-files-to-gitrep/index.html">
 <meta property="og:site_name" content="无止境地折腾">
+<meta property="og:description" content="初始化本地仓库将存储了本地文件的目录初始化为Git仓库，添加已有文件并提交。相关代码如下： 123git initgit add .git commit -m &#39;import local files&#39;  添加远程仓库添加远程仓库地址，并拉取远程仓库文件与本地文件合并，相关代码如下： 12git remote add origin 你的远程库地址（如:git@github.com:u">
+<meta property="article:published_time" content="2020-04-25T12:24:11.000Z">
+<meta property="article:modified_time" content="2020-04-25T12:24:11.000Z">
 <meta property="article:author" content="ZJNUET">
 <meta property="article:tag" content="电脑应用技巧">
 <meta property="article:tag" content=" 教育技术学">
@@ -70,121 +74,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200426_hello-world/" class="archive-article-date">
-  <time datetime="2020-04-26T01:47:51.105Z" itemprop="datePublished">Apr 26</time>
+        <section id="main"><article id="post-add-local-files-to-gitrep" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200425_add-local-files-to-gitrep/" class="article-date">
+  <time datetime="2020-04-25T12:24:11.000Z" itemprop="datePublished">2020-04-25</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200426_hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      将本地文件加入Git仓库
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200426_create-shorcut-in-ubuntu/" class="archive-article-date">
-  <time datetime="2020-04-26T01:17:30.000Z" itemprop="datePublished">Apr 26</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
-    </h1>
-  
+        <h4 id="初始化本地仓库"><a href="#初始化本地仓库" class="headerlink" title="初始化本地仓库"></a>初始化本地仓库</h4><p>将存储了本地文件的目录初始化为Git仓库，添加已有文件并提交。相关代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &#39;import local files&#39;</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200425_install-hexo-in-ubuntu/" class="archive-article-date">
-  <time datetime="2020-04-25T14:06:28.000Z" itemprop="datePublished">Apr 25</time>
-</a>
+<h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><p>添加远程仓库地址，并拉取远程仓库文件与本地文件合并，相关代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 你的远程库地址（如:git@github.com:username&#x2F;reponame.git)。</span><br><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+<h4 id="推送本地库"><a href="#推送本地库" class="headerlink" title="推送本地库"></a>推送本地库</h4><p>将本地的当前版本推送到远程仓库，相关代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200425_install-hexo-in-ubuntu/">在Ubuntu中安装Hexo</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200425_hexo-deploy-travisCI/" class="archive-article-date">
-  <time datetime="2020-04-25T13:49:48.000Z" itemprop="datePublished">Apr 25</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200425_add-local-files-to-gitrep/" data-id="ck9j9nxw00000xkskdr4k6y9b" class="article-share-link">分享</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200425_disable-touchpad-trackpoint-in-linux/" class="archive-article-date">
-  <time datetime="2020-04-25T13:15:14.000Z" itemprop="datePublished">Apr 25</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; 上一页</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2020/page/3/">3</a><a class="page-number" href="/archives/2020/page/4/">4</a><a class="extend next" rel="next" href="/archives/2020/page/3/">下一页 &amp;raquo;</a>
-  </nav>
+<nav id="article-nav">
+  
+    <a href="/20200425_ubuntu-software-list/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更新</strong>
+      <div class="article-nav-title">
+        
+          ubuntu-software-list
+        
+      </div>
+    </a>
+  
+  
+    <a href="/20200424_hexo-deploy-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更老</strong>
+      <div class="article-nav-title">Hexo部署到Github Pages</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
