@@ -72,6 +72,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-lubuntu-dual-monitor-wallpaper" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200429_lubuntu-dual-monitor-wallpaper/" class="article-date">
+  <time datetime="2020-04-29T05:29:54.000Z" itemprop="datePublished">2020-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200429_lubuntu-dual-monitor-wallpaper/">Lubuntu壁纸横跨双显示器的修改</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Lubuntu自18.</p>
+<p>1、安装修复脚本</p>
+<p>可以在这里查看：<a href="https://code.launchpad.net/~hmollercl/stitchwp/+git/stitchwp" target="_blank" rel="noopener">https://code.launchpad.net/~hmollercl/stitchwp/+git/stitchwp</a> ，或者也可以直接克隆以下仓库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;git.launchpad.net&#x2F;~hmollercl&#x2F;stitchwp</span><br></pre></td></tr></table></figure>
+<p>&lt;!-More–&gt;</p>
+<p>2、安装依赖<br>这个脚本的原理就是检查原先的壁纸设置，然后调用identify将它修改为适合双显示器环境的壁纸，最终实现两边“独立”显示的效果。这个identity命令包含在以下包中，可以根据需要选择安装一个，我选择的是这个compact的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Command &#39;identify&#39; not found, but can be installed with:</span><br><span class="line"></span><br><span class="line">sudo apt install graphicsmagick-imagemagick-compat  # version 1.4+really1.3.35-1, or</span><br><span class="line">sudo apt install imagemagick-6.q16                  # version 8:6.9.10.23+dfsg-2.1ubuntu11</span><br><span class="line">sudo apt install imagemagick-6.q16hdri              # version 8:6.9.10.23+dfsg-2.1ubuntu11</span><br></pre></td></tr></table></figure>
+
+<p>3、使用方法<br>先按照常规的方式设置好壁纸，然后执行克隆下来的仓库中的stitchWP.sh。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;stitchWP.sh </span><br><span class="line">convert -size 3286x1080 xc:#000000 -draw &quot;image over 0,0 1366,768 &#39;&#x2F;home&#x2F;lester&#x2F;Pictures&#x2F;1009758-scenic-wallpaper-1920x1080-laptop.jpg&#39;&quot; -draw &quot;image over 1366,0 1920,1080 &#39;&#x2F;home&#x2F;lester&#x2F;Pictures&#x2F;1009758-scenic-wallpaper-1920x1080-laptop.jpg&#39;&quot; &#x2F;home&#x2F;lester&#x2F;.config&#x2F;pcmanfm-qt&#x2F;lxqt&#x2F;stitchWP.jpg</span><br><span class="line">pcmanfm-qt --set-wallpaper &#x2F;home&#x2F;lester&#x2F;.config&#x2F;pcmanfm-qt&#x2F;lxqt&#x2F;stitchWP.jpg</span><br><span class="line">QFileSystemWatcher::removePaths: list is empty</span><br><span class="line">QFileSystemWatcher::removePaths: list is empty</span><br></pre></td></tr></table></figure>
+
+<p>命令执行之后，稍过一会桌面（我试了几次，大概需要5-10s）就会刷新，显示正常的效果。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://scratchzjnu.github.io/20200429_lubuntu-dual-monitor-wallpaper/" data-id="ck9kwwz4o0000gtsk3wezg2pb" class="article-share-link">分享</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-sublime-3211-regi" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/20200428_sublime-3211-regi/" class="article-date">
@@ -476,49 +524,6 @@
 
 
   
-    <article id="post-disable-touchpad-trackpoint-in-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/20200425_disable-touchpad-trackpoint-in-linux/" class="article-date">
-  <time datetime="2020-04-25T13:15:14.000Z" itemprop="datePublished">2020-04-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/20200425_disable-touchpad-trackpoint-in-linux/">Linux中禁用触控板与Trackpoint</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。<br>相关的一些方法如下：</p>
-        
-          <p class="article-more-link">
-            <a href="/20200425_disable-touchpad-trackpoint-in-linux/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_disable-touchpad-trackpoint-in-linux/" data-id="ck9gebgjk000234my2xwre6wj" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -569,6 +574,10 @@
       <ul>
         
           <li>
+            <a href="/20200429_lubuntu-dual-monitor-wallpaper/">Lubuntu壁纸横跨双显示器的修改</a>
+          </li>
+        
+          <li>
             <a href="/20200428_sublime-3211-regi/">Sublime Text3输入注册码</a>
           </li>
         
@@ -582,10 +591,6 @@
         
           <li>
             <a href="/20200427_wifi-autoconnect-lubuntu20/">Lubuntu 20.04中自动连接WiFi</a>
-          </li>
-        
-          <li>
-            <a href="/20200426_hexo-landscape-setting-tips/">Hexo Landscape主题的一些配置记录</a>
           </li>
         
       </ul>
