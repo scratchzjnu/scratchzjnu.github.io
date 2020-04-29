@@ -31,5 +31,8 @@ synclient TouchpadOff=1 # 禁用
 synclient TouchpadOff=0 # 启用
 ```
 此时尽管触控板禁用了，但Trackpoint依然可用。比较符合我的需求，同样这一方法也仅在当前会话中有效。如果需要一直保持这一配置，可以在`/etc/rc.local`中添加上述代码。
+
 即`sudo vim /etc/rc.local`, 在最后增加：`synclient TouchpadOff=1`，保存退出
 
+2020.4.29更新：
+Lubuntu中rc.local不起作用了，可以在开始菜单中找到“首选项”/“LXQT设置”/“会话配置”，在其中的“命令”中加入上述命令。
