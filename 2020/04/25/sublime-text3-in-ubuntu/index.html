@@ -5,17 +5,18 @@
   
 
   
-  <title>github pages | 我的主页</title>
+  <title>Ubuntu中安装Sublime Text 3 | 我的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
+  <meta name="description" content="Sublime Text 3是优秀的跨平台文本编辑器，也是程序员的神器，它的插件及其管理器的功能应该让人过目不忘。介绍一下Ubuntu中的安装方法。 添加GPG Key先在终端中用以下命令下载并添加GPG Key: 1wget -qO - https:&#x2F;&#x2F;download.sublimetext.com&#x2F;sublimehq-pub.gpg | sudo apt-key">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github pages">
-<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/29/github-pages/index.html">
+<meta property="og:title" content="Ubuntu中安装Sublime Text 3">
+<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/25/sublime-text3-in-ubuntu/index.html">
 <meta property="og:site_name" content="我的主页">
-<meta property="og:description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
-<meta property="article:published_time" content="2020-04-29T01:54:33.000Z">
-<meta property="article:modified_time" content="2020-04-29T01:55:11.096Z">
+<meta property="og:description" content="Sublime Text 3是优秀的跨平台文本编辑器，也是程序员的神器，它的插件及其管理器的功能应该让人过目不忘。介绍一下Ubuntu中的安装方法。 添加GPG Key先在终端中用以下命令下载并添加GPG Key: 1wget -qO - https:&#x2F;&#x2F;download.sublimetext.com&#x2F;sublimehq-pub.gpg | sudo apt-key">
+<meta property="article:published_time" content="2020-04-25T13:13:35.000Z">
+<meta property="article:modified_time" content="2020-04-29T02:02:43.606Z">
 <meta property="article:author" content="zjnuet">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="我的主页" type="application/atom+xml">
@@ -69,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-github-pages" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-sublime-text3-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/29/github-pages/" class="article-date">
-  <time datetime="2020-04-29T01:54:33.000Z" itemprop="datePublished">2020-04-29</time>
+    <a href="/2020/04/25/sublime-text3-in-ubuntu/" class="article-date">
+  <time datetime="2020-04-25T13:13:35.000Z" itemprop="datePublished">2020-04-25</time>
 </a>
     
   </div>
@@ -83,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github pages
+      Ubuntu中安装Sublime Text 3
     </h1>
   
 
@@ -91,35 +92,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h3><p>-静态展示页面的服务<br>通常使用html、markdown文件<br>需要条件：username.github.io</p>
-<h3 id="静态站点建站系统"><a href="#静态站点建站系统" class="headerlink" title="静态站点建站系统"></a>静态站点建站系统</h3><p>-octpress (ruby)<br>-pelican(python)<br>-hexo (node.js)</p>
-<h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>-node.js npm(包管理器，相当于python中的pip)</p>
+        <p>Sublime Text 3是优秀的跨平台文本编辑器，也是程序员的神器，它的插件及其管理器的功能应该让人过目不忘。介绍一下Ubuntu中的安装方法。</p>
+<h4 id="添加GPG-Key"><a href="#添加GPG-Key" class="headerlink" title="添加GPG Key"></a>添加GPG Key</h4><p>先在终端中用以下命令下载并添加GPG Key:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO - https:&#x2F;&#x2F;download.sublimetext.com&#x2F;sublimehq-pub.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+<p>再安装<code>apt-transport-https</code>来为apt增加https源的访问功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apt-transport-https</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h4 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h4><p>官方提供了两个版本的源，Stable是稳定版，Dev是开发版，用于新功能（但也许不稳定）的体验，地址分别是：</p>
+<p>Stable</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https:&#x2F;&#x2F;download.sublimetext.com&#x2F; apt&#x2F;stable&#x2F;&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;sublime-text.list</span><br></pre></td></tr></table></figure>
+<p>Dev</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;deb https:&#x2F;&#x2F;download.sublimetext.com&#x2F; apt&#x2F;dev&#x2F;&quot; | sudo tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;sublime-text.list</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装Sublime-Text-3"><a href="#安装Sublime-Text-3" class="headerlink" title="安装Sublime Text 3"></a>安装Sublime Text 3</h4><p>更新apt的软件源并且安装，可以使用以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sublime-text</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://scratchzjnu.github.io/2020/04/29/github-pages/" data-id="ck9kot5e400008wjxar4iemon" class="article-share-link">Share</a>
+      <a data-url="http://scratchzjnu.github.io/2020/04/25/sublime-text3-in-ubuntu/" data-id="ck9kp3h9p000li8jxehdnblup" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/04/29/ubuntu-software-list/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/25/edit-hosts-in-linux/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ubuntu-software-list
+          编辑Linux的hosts文件
         
       </div>
     </a>
   
   
-    <a href="/2020/04/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/25/20200425_add-local-files-to-gitrep/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">将本地文件加入Git仓库</div>
     </a>
   
 </nav>

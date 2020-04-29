@@ -5,17 +5,19 @@
   
 
   
-  <title>github pages | 我的主页</title>
+  <title>Linux中禁用触控板与Trackpoint | 我的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
+  <meta name="description" content="家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。相关的一些方法如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github pages">
-<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/29/github-pages/index.html">
+<meta property="og:title" content="Linux中禁用触控板与Trackpoint">
+<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/25/disable-touchpad-trackpoint-in-linux/index.html">
 <meta property="og:site_name" content="我的主页">
-<meta property="og:description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
-<meta property="article:published_time" content="2020-04-29T01:54:33.000Z">
-<meta property="article:modified_time" content="2020-04-29T01:55:11.096Z">
+<meta property="og:description" content="家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。相关的一些方法如下：">
+<meta property="article:published_time" content="2020-04-25T13:15:14.000Z">
+<meta property="article:modified_time" content="2020-04-29T02:02:43.594Z">
 <meta property="article:author" content="zjnuet">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="thinkpad">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="我的主页" type="application/atom+xml">
@@ -69,10 +71,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-github-pages" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-disable-touchpad-trackpoint-in-linux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/29/github-pages/" class="article-date">
-  <time datetime="2020-04-29T01:54:33.000Z" itemprop="datePublished">2020-04-29</time>
+    <a href="/2020/04/25/disable-touchpad-trackpoint-in-linux/" class="article-date">
+  <time datetime="2020-04-25T13:15:14.000Z" itemprop="datePublished">2020-04-25</time>
 </a>
     
   </div>
@@ -83,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github pages
+      Linux中禁用触控板与Trackpoint
     </h1>
   
 
@@ -91,35 +93,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h3><p>-静态展示页面的服务<br>通常使用html、markdown文件<br>需要条件：username.github.io</p>
-<h3 id="静态站点建站系统"><a href="#静态站点建站系统" class="headerlink" title="静态站点建站系统"></a>静态站点建站系统</h3><p>-octpress (ruby)<br>-pelican(python)<br>-hexo (node.js)</p>
-<h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>-node.js npm(包管理器，相当于python中的pip)</p>
+        <p>家里一个比较老的Thinkpad X220跑不动Windows 10了，就装了个Lubuntu。经常会碰到触控板，所以打字的时候挺不方便的，我个人使用的第一台笔记本电脑是Thinkpad A21m，之后沿着T41、R51一路过来（再之后转到Macbook和其它各种好看的轻薄本了），所以还是比较习惯Trackpoint的，所以打算禁用触控板。<br>相关的一些方法如下：</p>
+<a id="more"></a>
+
+<h4 id="禁用触控板与Trackpoint"><a href="#禁用触控板与Trackpoint" class="headerlink" title="禁用触控板与Trackpoint"></a>禁用触控板与Trackpoint</h4><p>如果要同时禁用触控板与Trackpoint，可以使用以下方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -r psmouse # 禁用</span><br><span class="line">sudo modprobe -a psmouse # 启用</span><br></pre></td></tr></table></figure>
+<p>以上操作仅在当前会话有效，如果要长期禁用，可以：<br><code>sudo vi /etc/modeprobe.d/blacklist.conf</code> 然后在blacklist.conf的最后加入以下语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blacklist psmouse</span><br></pre></td></tr></table></figure>
+<p>此外，在BIOS中进行设置也是一种方法，但不太推荐，以免太长时间不用忘记还以为是硬件故障。</p>
+<h4 id="仅禁用触控板"><a href="#仅禁用触控板" class="headerlink" title="仅禁用触控板"></a>仅禁用触控板</h4><p>如果需要单独对触控板进行禁用与启用，可以用以下方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">synclient TouchpadOff&#x3D;1 # 禁用</span><br><span class="line">synclient TouchpadOff&#x3D;0 # 启用</span><br></pre></td></tr></table></figure>
+<p>此时尽管触控板禁用了，但Trackpoint依然可用。比较符合我的需求，同样这一方法也仅在当前会话中有效。如果需要一直保持这一配置，可以在<code>/etc/rc.local</code>中添加上述代码。<br>即<code>sudo vim /etc/rc.local</code>, 在最后增加：<code>synclient TouchpadOff=1</code>，保存退出</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://scratchzjnu.github.io/2020/04/29/github-pages/" data-id="ck9kot5e400008wjxar4iemon" class="article-share-link">Share</a>
+      <a data-url="http://scratchzjnu.github.io/2020/04/25/disable-touchpad-trackpoint-in-linux/" data-id="ck9kp3h8x0008i8jxhvr8eew3" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/04/29/ubuntu-software-list/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/25/hexo-deploy-travisCI/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ubuntu-software-list
+          用TravisCI发布Github Pages
         
       </div>
     </a>
   
   
-    <a href="/2020/04/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/25/install-flameshot-in-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">在Ubuntu中安装FlameShot</div>
     </a>
   
 </nav>

@@ -5,17 +5,18 @@
   
 
   
-  <title>github pages | 我的主页</title>
+  <title>Hexo Landscape主题的一些配置记录 | 我的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
+  <meta name="description" content="Landscape是Hexo自带的默认主题，这里记录一些常见的修改配置。当然，Hexo有很多漂亮的主题，你也可以clone相关主题的repo添加到themes目录，并在hexo的_config.yml的theme项中来指定。  Hexo创建的贴子是以标题作为文件名了，多了容易乱，如何处理？    可以在Hexo的_config.yml中修改”#Writing”部分的&#96;new_post_name”，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github pages">
-<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/29/github-pages/index.html">
+<meta property="og:title" content="Hexo Landscape主题的一些配置记录">
+<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/26/hexo-landscape-setting-tips/index.html">
 <meta property="og:site_name" content="我的主页">
-<meta property="og:description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
-<meta property="article:published_time" content="2020-04-29T01:54:33.000Z">
-<meta property="article:modified_time" content="2020-04-29T01:55:11.096Z">
+<meta property="og:description" content="Landscape是Hexo自带的默认主题，这里记录一些常见的修改配置。当然，Hexo有很多漂亮的主题，你也可以clone相关主题的repo添加到themes目录，并在hexo的_config.yml的theme项中来指定。  Hexo创建的贴子是以标题作为文件名了，多了容易乱，如何处理？    可以在Hexo的_config.yml中修改”#Writing”部分的&#96;new_post_name”，">
+<meta property="article:published_time" content="2020-04-26T02:31:51.000Z">
+<meta property="article:modified_time" content="2020-04-29T02:02:43.598Z">
 <meta property="article:author" content="zjnuet">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="我的主页" type="application/atom+xml">
@@ -69,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-github-pages" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo-landscape-setting-tips" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/29/github-pages/" class="article-date">
-  <time datetime="2020-04-29T01:54:33.000Z" itemprop="datePublished">2020-04-29</time>
+    <a href="/2020/04/26/hexo-landscape-setting-tips/" class="article-date">
+  <time datetime="2020-04-26T02:31:51.000Z" itemprop="datePublished">2020-04-26</time>
 </a>
     
   </div>
@@ -83,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github pages
+      Hexo Landscape主题的一些配置记录
     </h1>
   
 
@@ -91,35 +92,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h3><p>-静态展示页面的服务<br>通常使用html、markdown文件<br>需要条件：username.github.io</p>
-<h3 id="静态站点建站系统"><a href="#静态站点建站系统" class="headerlink" title="静态站点建站系统"></a>静态站点建站系统</h3><p>-octpress (ruby)<br>-pelican(python)<br>-hexo (node.js)</p>
-<h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>-node.js npm(包管理器，相当于python中的pip)</p>
+        <p>Landscape是Hexo自带的默认主题，这里记录一些常见的修改配置。当然，Hexo有很多漂亮的主题，你也可以clone相关主题的repo添加到themes目录，并在hexo的_config.yml的theme项中来指定。</p>
+<ol>
+<li><p>Hexo创建的贴子是以标题作为文件名了，多了容易乱，如何处理？  </p>
+<p> 可以在Hexo的<code>_config.yml</code>中修改”#Writing”部分的`new_post_name”，例如以下语句是将其设置为“年月日-标题”的方式：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new_post_name: :year:month:day_:title.md # File name of new posts</span><br></pre></td></tr></table></figure>
+ <a id="more"></a></li>
+<li><p>贴子怎么添加多个标签？<br> 要为贴子添加多个标签，需要在生成的贴子源文件的frontmatter部分，用以下方式设置tags，如果觉得不大好记，就记住放一个Python的列表好了。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [tag1, tag2, tag3]</span><br></pre></td></tr></table></figure></li>
+<li><p>如何修改默认的banner图？<br> 最简单的方式就是将自己的banner图替换landscape\source\images目录下的banner.jpg，文件。<br> 实际的配置选项是在主题目录下source\css中的<code>_variables.styl</code>，修改Header中的几个选项：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">banner-height &#x3D; 138px</span><br><span class="line">banner-url &#x3D; &quot;images&#x2F;banner.png&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>如何修改Hexo网站的语言？<br> 默认的中文语言包位于landscape\language中，名为<code>zh-CN.yml</code>，更名为<code>zh-Hans.yml</code>，将其中未翻译好的继续翻译完。<br> 然后修改Hexo目录下的<code>_config.yml</code>，修改以下项：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://scratchzjnu.github.io/2020/04/29/github-pages/" data-id="ck9kot5e400008wjxar4iemon" class="article-share-link">Share</a>
+      <a data-url="http://scratchzjnu.github.io/2020/04/26/hexo-landscape-setting-tips/" data-id="ck9kp3h9i000gi8jx468k53xo" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/04/29/ubuntu-software-list/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/27/20200427_wifi-autoconnect-lubuntu20/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ubuntu-software-list
+          Lubuntu 20.04中自动连接WiFi
         
       </div>
     </a>
   
   
-    <a href="/2020/04/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/26/create-shorcut-in-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Ubuntu中创建桌面快捷方式</div>
     </a>
   
 </nav>

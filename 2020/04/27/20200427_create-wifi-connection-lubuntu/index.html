@@ -5,17 +5,19 @@
   
 
   
-  <title>github pages | 我的主页</title>
+  <title>Lubuntu下用命令行建立WiFi连接 | 我的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
+  <meta name="description" content="要在命令行下连接WiFi到特定的SSID，可以参照以下的步骤： 查看网卡并启用123iwconfigsudo ip link set wlan0 up # 改成自己的无线网卡  扫描可用热点1234sudo iw dev wlan0 scan | less  # 分页显示sudo iw dev wlan0 scan | grep SSID # 仅显示包含SSID的行，即热点列表 连接到热点找到自己">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github pages">
-<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/29/github-pages/index.html">
+<meta property="og:title" content="Lubuntu下用命令行建立WiFi连接">
+<meta property="og:url" content="http://scratchzjnu.github.io/2020/04/27/20200427_create-wifi-connection-lubuntu/index.html">
 <meta property="og:site_name" content="我的主页">
-<meta property="og:description" content="github pages-静态展示页面的服务通常使用html、markdown文件需要条件：username.github.io 静态站点建站系统-octpress (ruby)-pelican(python)-hexo (node.js) 安装过程：-node.js npm(包管理器，相当于python中的pip)">
-<meta property="article:published_time" content="2020-04-29T01:54:33.000Z">
-<meta property="article:modified_time" content="2020-04-29T01:55:11.096Z">
+<meta property="og:description" content="要在命令行下连接WiFi到特定的SSID，可以参照以下的步骤： 查看网卡并启用123iwconfigsudo ip link set wlan0 up # 改成自己的无线网卡  扫描可用热点1234sudo iw dev wlan0 scan | less  # 分页显示sudo iw dev wlan0 scan | grep SSID # 仅显示包含SSID的行，即热点列表 连接到热点找到自己">
+<meta property="article:published_time" content="2020-04-27T02:10:00.000Z">
+<meta property="article:modified_time" content="2020-04-29T02:02:43.590Z">
 <meta property="article:author" content="zjnuet">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="网络">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="我的主页" type="application/atom+xml">
@@ -69,10 +71,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-github-pages" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-20200427_create-wifi-connection-lubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/29/github-pages/" class="article-date">
-  <time datetime="2020-04-29T01:54:33.000Z" itemprop="datePublished">2020-04-29</time>
+    <a href="/2020/04/27/20200427_create-wifi-connection-lubuntu/" class="article-date">
+  <time datetime="2020-04-27T02:10:00.000Z" itemprop="datePublished">2020-04-27</time>
 </a>
     
   </div>
@@ -83,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github pages
+      Lubuntu下用命令行建立WiFi连接
     </h1>
   
 
@@ -91,35 +93,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h3><p>-静态展示页面的服务<br>通常使用html、markdown文件<br>需要条件：username.github.io</p>
-<h3 id="静态站点建站系统"><a href="#静态站点建站系统" class="headerlink" title="静态站点建站系统"></a>静态站点建站系统</h3><p>-octpress (ruby)<br>-pelican(python)<br>-hexo (node.js)</p>
-<h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>-node.js npm(包管理器，相当于python中的pip)</p>
+        <p>要在命令行下连接WiFi到特定的SSID，可以参照以下的步骤：</p>
+<h5 id="查看网卡并启用"><a href="#查看网卡并启用" class="headerlink" title="查看网卡并启用"></a>查看网卡并启用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iwconfig</span><br><span class="line"></span><br><span class="line">sudo ip link set wlan0 up # 改成自己的无线网卡</span><br></pre></td></tr></table></figure>
+
+<h4 id="扫描可用热点"><a href="#扫描可用热点" class="headerlink" title="扫描可用热点"></a>扫描可用热点</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo iw dev wlan0 scan | less  # 分页显示</span><br><span class="line"></span><br><span class="line">sudo iw dev wlan0 scan | grep SSID # 仅显示包含SSID的行，即热点列表</span><br></pre></td></tr></table></figure>
+<h5 id="连接到热点"><a href="#连接到热点" class="headerlink" title="连接到热点"></a>连接到热点</h5><p>找到自己要连接的SSID，用以下命令连接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo iw dev wlan0 connect [网络 SSID] key 0:[WEP 密钥]</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://scratchzjnu.github.io/2020/04/29/github-pages/" data-id="ck9kot5e400008wjxar4iemon" class="article-share-link">Share</a>
+      <a data-url="http://scratchzjnu.github.io/2020/04/27/20200427_create-wifi-connection-lubuntu/" data-id="ck9kp3h8j0002i8jx8ae9g65h" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/04/29/ubuntu-software-list/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/27/20200427_change-useragent-in-falcon/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ubuntu-software-list
+          修改Falcon浏览器的User Agent信息
         
       </div>
     </a>
   
   
-    <a href="/2020/04/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/27/20200427_wifi-autoconnect-lubuntu20/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Lubuntu 20.04中自动连接WiFi</div>
     </a>
   
 </nav>
