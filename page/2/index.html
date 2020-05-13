@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="无止境地折腾">
-<meta property="og:url" content="https://scratchzjnu.github.io/page/2/index.html">
+<meta property="og:url" content="http://edu.ilester.net/page/2/index.html">
 <meta property="og:site_name" content="无止境地折腾">
 <meta property="article:author" content="ZJNUET">
 <meta property="article:tag" content="电脑应用技巧">
@@ -66,13 +66,109 @@
         <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://scratchzjnu.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edu.ilester.net"></form>
       </div>
     </div>
   </div>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-create-shorcut-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200426_create-shorcut-in-ubuntu/" class="article-date">
+  <time datetime="2020-04-26T01:17:30.000Z" itemprop="datePublished">2020-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200426_create-shorcut-in-ubuntu/">Ubuntu中创建桌面快捷方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在Ubuntu系统中要创建程序的快捷方式，可以通过创建<code>.desktop</code>文件的方式来实现。这里以Sublime Text 3为例，先创建一个名为<code>sublime-text.desktop</code>的文件，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version&#x3D;1.0</span><br><span class="line">Type&#x3D;Link</span><br><span class="line">Name&#x3D;Sublime Text 3</span><br><span class="line">Comment&#x3D;Launch Sublime Text 3 Editor</span><br><span class="line">URL&#x3D;&#x2F;usr&#x2F;bin&#x2F;subl</span><br><span class="line">Icon&#x3D;&#x2F;usr&#x2F;share&#x2F;icons&#x2F;hicolor&#x2F;48x48&#x2F;apps&#x2F;sublime-text.png</span><br><span class="line">X-Ubuntu-Gettext-Domain&#x3D;Sublime Text 3 Editor</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/20200426_create-shorcut-in-ubuntu/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://edu.ilester.net/20200426_create-shorcut-in-ubuntu/" data-id="ck9gebgje000134myfntea0jg" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-install-hexo-in-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200425_install-hexo-in-ubuntu/" class="article-date">
+  <time datetime="2020-04-25T14:06:28.000Z" itemprop="datePublished">2020-04-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/20200425_install-hexo-in-ubuntu/">在Ubuntu中安装Hexo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hexo是一个静态站点生成程序，使用的开发技术是Nodejs。在Ubuntu及衍生版中的安装方法如下：</p>
+<h4 id="安装NodeJS"><a href="#安装NodeJS" class="headerlink" title="安装NodeJS"></a>安装NodeJS</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nodejs, npm</span><br></pre></td></tr></table></figure>
+<p>更换淘宝镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm --global config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>查看并检查配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/20200425_install-hexo-in-ubuntu/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://edu.ilester.net/20200425_install-hexo-in-ubuntu/" data-id="ck9gebgjy000c34myawe952do" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-hexo-deploy-travisCI" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -112,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_hexo-deploy-travisCI/" data-id="ck9gebgjv000934mycr3ogdyf" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200425_hexo-deploy-travisCI/" data-id="ck9gebgjv000934mycr3ogdyf" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
@@ -155,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_disable-touchpad-trackpoint-in-linux/" data-id="ck9gebgjk000234my2xwre6wj" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200425_disable-touchpad-trackpoint-in-linux/" data-id="ck9gebgjk000234my2xwre6wj" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li></ul>
@@ -200,7 +296,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_install-flameshot-in-ubuntu/" data-id="ck9gebgjw000a34my2xz190ph" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200425_install-flameshot-in-ubuntu/" data-id="ck9gebgjw000a34my2xz190ph" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -245,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_edit-hosts-in-linux/" data-id="ck9gebgjp000434my7ms81pyc" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200425_edit-hosts-in-linux/" data-id="ck9gebgjp000434my7ms81pyc" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -292,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_sublime-text3-in-ubuntu/" data-id="ck9gebgjz000e34my5usxg1zk" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200425_sublime-text3-in-ubuntu/" data-id="ck9gebgjz000e34my5usxg1zk" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -335,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_ubuntu-software-list/" data-id="ck9gebgk1000g34my37rpf8t1" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200425_ubuntu-software-list/" data-id="ck9gebgk1000g34my37rpf8t1" class="article-share-link">分享</a>
       
       
     </footer>
@@ -382,7 +478,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200425_add-local-files-to-gitrep/" data-id="ck9j9nxw00000xkskdr4k6y9b" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200425_add-local-files-to-gitrep/" data-id="ck9j9nxw00000xkskdr4k6y9b" class="article-share-link">分享</a>
       
       
     </footer>
@@ -433,7 +529,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://scratchzjnu.github.io/20200424_hexo-deploy-github/" data-id="ck9gebgjt000634mydlrt1uu4" class="article-share-link">分享</a>
+      <a data-url="http://edu.ilester.net/20200424_hexo-deploy-github/" data-id="ck9gebgjt000634mydlrt1uu4" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
@@ -470,7 +566,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raspbeery-pi/" rel="tag">raspbeery-pi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scratch/" rel="tag">scratch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/" rel="tag">sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hosts/" rel="tag">hosts</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/printer/" rel="tag">printer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raspbeery-pi/" rel="tag">raspbeery-pi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scratch/" rel="tag">scratch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/" rel="tag">sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad/" rel="tag">thinkpad</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag">网络</a></li></ul>
     </div>
   </div>
 
@@ -480,7 +576,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 12.5px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/raspbeery-pi/" style="font-size: 10px;">raspbeery-pi</a> <a href="/tags/scratch/" style="font-size: 10px;">scratch</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 17.5px;">ubuntu</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 15px;">网络</a>
+      <a href="/tags/github/" style="font-size: 12.5px;">github</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/linux/" style="font-size: 17.5px;">linux</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/printer/" style="font-size: 10px;">printer</a> <a href="/tags/raspbeery-pi/" style="font-size: 10px;">raspbeery-pi</a> <a href="/tags/scratch/" style="font-size: 10px;">scratch</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/thinkpad/" style="font-size: 10px;">thinkpad</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 15px;">网络</a>
     </div>
   </div>
 
@@ -502,6 +598,14 @@
       <ul>
         
           <li>
+            <a href="/20200513_install-mysql-on-ubuntu20-04/">Ubuntu 20.04中安装MySQL Server</a>
+          </li>
+        
+          <li>
+            <a href="/20200511_setup-hp1106-in-ubuntu/">Lubuntu 20.04安装HP 1106打印机</a>
+          </li>
+        
+          <li>
             <a href="/20200508_install-scratch3-addons-in-raspberrypi/">树莓派中安装Scratch 3及GPIO插件</a>
           </li>
         
@@ -511,14 +615,6 @@
         
           <li>
             <a href="/20200428_sublime-3211-regi/">Sublime Text3输入注册码</a>
-          </li>
-        
-          <li>
-            <a href="/20200427_change-useragent-in-falcon/">修改Falkon浏览器的User Agent信息</a>
-          </li>
-        
-          <li>
-            <a href="/20200427_create-wifi-connection-lubuntu/">Lubuntu下用命令行建立WiFi连接</a>
           </li>
         
       </ul>

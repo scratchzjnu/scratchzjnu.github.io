@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>标签: github | 无止境地折腾</title>
+  <title>Ubuntu 20.04中安装MySQL Server | 无止境地折腾</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="无止境地折腾">
-<meta property="og:url" content="http://edu.ilester.net/tags/github/index.html">
+  <meta name="description" content="自18.10开始，在Ubuntu及衍生版中安装MySQL Server有些不一样，最主要的就是root用户的密码生成机制。在以往版本中，安装向导会让用户设定root的密码，并用mysql_native_password的方式验证，但似乎18.10开始，需要单独使用mysql_secure_installation生成root密码，并且默认采用unix_sockets的验证方式。记录一下安装的过程，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu 20.04中安装MySQL Server">
+<meta property="og:url" content="http://edu.ilester.net/20200513_install-mysql-on-ubuntu20-04/index.html">
 <meta property="og:site_name" content="无止境地折腾">
+<meta property="og:description" content="自18.10开始，在Ubuntu及衍生版中安装MySQL Server有些不一样，最主要的就是root用户的密码生成机制。在以往版本中，安装向导会让用户设定root的密码，并用mysql_native_password的方式验证，但似乎18.10开始，需要单独使用mysql_secure_installation生成root密码，并且默认采用unix_sockets的验证方式。记录一下安装的过程，">
+<meta property="article:published_time" content="2020-05-13T12:36:31.000Z">
+<meta property="article:modified_time" content="2020-05-13T12:36:31.000Z">
 <meta property="article:author" content="ZJNUET">
-<meta property="article:tag" content="电脑应用技巧">
-<meta property="article:tag" content=" 教育技术学">
-<meta property="article:tag" content=" 浙江师范大学">
-<meta property="article:tag" content=" Linux">
-<meta property="article:tag" content=" Ubuntu">
-<meta property="article:tag" content=" Python">
-<meta property="article:tag" content=" Raspberry Pi">
-<meta property="article:tag" content=" Arduino">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="无止境地折腾" type="application/atom+xml">
@@ -72,59 +70,68 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200425_hexo-deploy-travisCI/" class="archive-article-date">
-  <time datetime="2020-04-25T13:49:48.000Z" itemprop="datePublished">Apr 25</time>
+        <section id="main"><article id="post-install-mysql-on-ubuntu20-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/20200513_install-mysql-on-ubuntu20-04/" class="article-date">
+  <time datetime="2020-05-13T12:36:31.000Z" itemprop="datePublished">2020-05-13</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200425_hexo-deploy-travisCI/">用TravisCI发布Github Pages</a>
+    <h1 class="article-title" itemprop="name">
+      Ubuntu 20.04中安装MySQL Server
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/20200424_hexo-deploy-github/" class="archive-article-date">
-  <time datetime="2020-04-24T04:01:19.000Z" itemprop="datePublished">Apr 24</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/20200424_hexo-deploy-github/">Hexo部署到Github Pages</a>
-    </h1>
-  
+        <p>自18.10开始，在Ubuntu及衍生版中安装MySQL Server有些不一样，最主要的就是root用户的密码生成机制。在以往版本中，安装向导会让用户设定root的密码，并用mysql_native_password的方式验证，但似乎18.10开始，需要单独使用mysql_secure_installation生成root密码，并且默认采用unix_sockets的验证方式。记录一下安装的过程，供参考。</p>
+<a id="more"></a>
 
-    </header>
+<p>首先还是安装mysql-server包，会随同安装一些诸如mysql-client之类的包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mysql-server</span><br></pre></td></tr></table></figure>
+
+<p>第二步，初始化root账户的密码，以方便进行后续的操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<p>此时会出现一个向导，依据其中的提示设定密码，选择是否要禁止远程登录、禁止匿名用户以及是否删除示例数据库等，依据需要选择。</p>
+<p>这一步之后，就可以使用root账户登录，但要注意因为认证方式是unix_sockets，所以需要用sudo。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>输入设置的密码后即可进入数据库。</p>
+<p>为了后续简化，也可以选择创建一个其它用户。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create user &#39;temp&#39;@&#39;%&#39; identified with mysql_native_password by &#39;PASSWORD&#39;;</span><br><span class="line">grant all privileges on *.* to &#39;temp&#39;@&#39;%&#39;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+<p>如果要限制权限授予的数据库或表，修改其中的“<em>.</em>”，如果要设定用户仅限本机访问，可以将“%”改为“localhost”。<br>这一步之后，退出root账户，即可以改用新创建的帐户登录MySQL Server。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://edu.ilester.net/20200513_install-mysql-on-ubuntu20-04/" data-id="cka5c91vp0004l5skbn8j6dyu" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
+
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/20200511_setup-hp1106-in-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">更老</strong>
+      <div class="article-nav-title">Lubuntu 20.04安装HP 1106打印机</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
