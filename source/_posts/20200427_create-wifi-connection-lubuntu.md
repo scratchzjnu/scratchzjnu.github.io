@@ -1,6 +1,7 @@
 ---
 title: Lubuntu下用命令行建立WiFi连接
 date: 2020-04-27 10:10:00
+category: 创客与学科教学应用
 tags: [ubuntu, 网络]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: 用TravisCI发布Github Pages
 date: 2020-04-25 21:49:48
+category: 创客与学科教学应用
 tags: [hexo,github] 
 ---
 

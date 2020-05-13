@@ -1,6 +1,7 @@
 ---
 title: Hexo Landscape主题的一些配置记录
 date: 2020-04-26 10:31:51
+category: 创客与学科教学应用
 tags: [hexo]
 ---
 

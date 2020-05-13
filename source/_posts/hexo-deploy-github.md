@@ -1,6 +1,7 @@
 ---
 title: Hexo部署到Github Pages
 date: 2020-04-24 12:01:19
+category: 创客与学科教学应用
 tags: [hexo,github]
 ---
 前置条件：

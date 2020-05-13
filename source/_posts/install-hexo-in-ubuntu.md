@@ -1,6 +1,7 @@
 ---
 title: 在Ubuntu中安装Hexo
 date: 2020-04-25 22:06:28
+category: 创客与学科教学应用
 tags: [linux,ubuntu]
 ---
 

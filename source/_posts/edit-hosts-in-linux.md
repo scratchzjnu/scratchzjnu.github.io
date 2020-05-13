@@ -1,6 +1,7 @@
 ---
 title: 编辑Linux的hosts文件
 date: 2020-04-25 21:13:50
+category: 创客与学科教学应用
 tags: [linux,hosts]
 ---
 

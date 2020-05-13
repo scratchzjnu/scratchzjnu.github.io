@@ -1,6 +1,7 @@
 ---
 title: Lubuntu 20.04中自动连接WiFi
 date: 2020-04-27 10:03:57
+category: 创客与学科教学应用
 tags: [ubuntu, 网络]
 ---
 
